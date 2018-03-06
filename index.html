@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>APP_index</title>
+
+	<link rel="stylesheet" href="dist/semantic.min.css">
+	<script src="dist/jquery.min.js"></script>
+	<script src="dist/semantic.min.js"></script>
+		<style> 
+		.ui.visible.left.sidebar~.main {
+		    -webkit-transform: translate3d(4em,0,0);
+		    transform: translate3d(4em,0,0);
+		}
+		.ui.sidebar{ 
+			overflow-y: hidden!important;	
+		}
+	</style>	
+</head>
+<body>
+	<div class="ui left vertical inverted blue  labeled icon visible sidebar menu" id="leftsidebar">
+	  <a class="item ">
+	    <i class="home icon"></i>
+	    主页
+	  </a>
+	  <a class="item">
+	    <i class="block layout  icon"></i>
+	    主题
+	  </a>
+	  <a class="item">
+	    <i class="smile icon"></i>
+	    朋友
+	  </a>
+	  <a class="item">
+	    <i class="calendar icon"></i>
+	    历史
+	  </a>
+	  <a class="item">
+	    <i class="mail icon"></i>
+	    消息
+	  </a>
+	  <a class="item">
+	    <i class="chat icon"></i>
+	    讨论
+	  </a>
+	  <a class="item">
+	    <i class="trophy icon"></i>
+	    奖励
+	  </a>
+	  <a class="item">
+	    <i class="shop icon"></i>
+	    商店
+	  </a>
+	  <a class="item">
+	    <i class="settings icon"></i>
+	    设置
+	  </a>
+	</div>
+	<div class="main pusher">
+	    <div class="ui basic segment inverted red">
+	      	<h3 class="ui header">应用内容</h3>
+	    </div>
+	</div>
+	<script>
+		$/*('#leftsidebar').sidebar({
+		    context: '.segment'
+		  }).sidebar('hide');*/
+	</script>
+</body>
+</html>

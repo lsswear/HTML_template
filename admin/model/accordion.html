@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADMIN_index</title>
+	<link rel="stylesheet" href="../public/dist/semantic.min.css">
+	<link rel="stylesheet" href="../public/css/common.css">
+</head>
+	<body class="body">
+		<div class="ui grid"> 
+			<div class="row">
+				<div class="column">
+					<h2 class="ui header">基本</h2>
+					<p>初始化/异步加载/</p>
+					<div class="ui accordion">
+					  	<div class="title"><i class="dropdown icon"></i>test1</div>
+					  	<div class="content">
+					  	</div>
+						<div class="title"><i class="dropdown icon"></i>test2</div>
+					  	<div class="content">
+					  	</div>
+						<div class="title"><i class="dropdown icon"></i>test3</div>
+						<div class="content">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+			<div class="row">
+				<div class="column">
+					<h2 class="ui header"><a href="http://www.semantic-ui-cn.com/modules/accordion.php#/settings" target="_blank">设置</a></h2>
+					<div class="ui accordion" id="test">
+					  	<div class="title"><i class="dropdown icon"></i>test1</div>
+					  	<div class="content">
+					  		<p>test1</p>
+					  	</div>
+						<div class="title"><i class="dropdown icon"></i>test2</div>
+					  	<div class="content">
+					  		<p>test1</p>
+					  	</div>
+						<div class="title"><i class="dropdown icon"></i>test3</div>
+						<div class="content">
+							<p>test1</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+		</div>
+		<script src="../public/dist/jquery.min.js"></script>
+		<script src="../public/dist/semantic.min.js"></script>
+		<script src="../public/js/common.js"></script>
+		<script>
+			$('.ui.accordion').accordion();
+			$('.ui.accordion .title').click(
+				function(){ 
+					$(this).next('.content').load('model/test.txt');
+					$('.ui.accordion').accordion('refresh');	
+				}
+			);
+			$('#test').accordion({
+				exclusive: false,
+			    selector: {
+			      accordion : '.accordion',
+				  title     : '.title',
+				  content   : '.content'
+			    },
+			    onOpen:function(){ 
+			    	alert('open');
+			    },
+			    onClose:function(){ 
+			    	alert('colse');
+			    },
+			    onChange:function(){ 
+			    	alert('change');
+			    }
+			});
+		</script>
+	</body>
+</html>

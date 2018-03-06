@@ -1,0 +1,52 @@
+body{ 
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	background-color: #DDF0ED;
+ }
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0; 
+    padding: 0;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ui.segment{ 
+	filter:Alpha(opacity=20);
+	background-color: rgba(0,0,0,0.2);
+}
+.content { 
+	width:40%;
+	clear: both;
+	overflow: hidden;
+	padding:1em;
+ }
+.content .grid {
+    width: auto;
+    height: auto;
+    clear: both;
+    overflow: hidden;
+}
+@media screen and (max-width: 992px) {
+    .content { 
+		width:100%;
+		height:100%;
+		padding: 0em;
+	}
+	.ui.segment{ 
+		margin:0;
+		border-radius:0;
+		padding: 0em;
+	}
+}
+#form_div{ 
+	background-color:#ffffff;	
+	background-color: rgba(0,0,0,0.2);
+}
+.ui.form{ 
+	padding:2em;
+}

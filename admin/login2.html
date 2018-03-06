@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADMIN_login</title>
+	<link rel="stylesheet" href="public/dist/semantic.min.css">
+	<link rel="stylesheet" href="public/css/login2.css">
+</head>
+<body>
+	<div class="bg1"></div>
+	<div class="bg2"></div>
+	<div class="ui middle aligned stackable center aligned grid content">
+		<div class="row">
+			<div class="sixteen wide column" style="">
+				<h2 class="ui black center aligned">
+				  	<span class="ui olive"><i class="settings icon"></i>XXX</span>后台管理系统
+				</h2>
+			</div>
+		</div>
+		<div class="row">		
+			<div class="nine wide column  left aligned" style="">
+				<div class="ui form">
+					<div class="field">
+						<div class="ui left icon input">
+							<input type="text" placeholder="用户名"> <i class="user icon"></i>
+						</div>
+					</div>
+					<div class="field">
+						<div class="ui left icon input">
+							<input type="password" placeholder="密码"> <i class="lock icon"></i>
+						</div>
+					</div>
+					<div class="field">
+					    <div class="ui blue checkbox">
+					      <input type="checkbox">
+					      <label class="ui" style="color:#091508">记住登录</label>
+					    </div>
+					</div>
+					<button class="ui labeled icon black button">
+						  <i class="paw icon"></i>
+						  登&nbsp;&nbsp;&nbsp;&nbsp;陆
+					</button>
+				</div>
+			</div>
+			<div class="ui seven wide column" id="logindiv">
+				<p class="ui black">
+					<a href="#" class="ui olive">该后台</a>优点？<br/>
+					<span class="ui olive">开源、安全性高、便于维护和二次开发</span>
+				</p>
+				<p class="ui black">
+					项目支持？<br/>
+					<a href="#" class="ui olive">源码下载</a>、<a href="#" class="ui olive">开发手册</a>、<a href="#" class="ui olive">二次开发服务</a>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<span class="ui black">2017-</span><a href="#" class="ui olive"><b>LSSWEAR</b>-Universal management system</a>
+		</div>
+	</div>
+	<script src="public/dist/jquery.min.js"></script>
+	<script src="public/dist/semantic.min.js"></script>
+</body>
+<script type="text/javascript">
+$(function(){ 
+	$('#login').click(function(){ 
+		$('form').submit();
+	})
+})
+</script>
+</html>

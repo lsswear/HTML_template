@@ -1,0 +1,51 @@
+.ui.menu{ 
+	border-radius: 0rem;
+ }
+.ui.menu .item,a{ 
+	cursor:pointer;
+}
+.ui.sidebar{ 
+	overflow-y: hidden!important;	
+}
+.ui.vertical.menu {
+     width: 100%;
+}
+#menu_button{ 
+	visibility:hidden; 
+}
+#main{
+	padding:0px!important;
+	margin: 0rem; 
+	margin-top: -1rem;
+} 
+#content{
+	padding:0px!important;
+}
+#menu_left{
+    padding:0px!important;
+}
+.body{
+	padding:1em;
+}
+/*#content .content_div{
+	padding-top:1em;
+	padding-left:1em;
+}*/
+#content #content_div{
+	height: 100%;
+}
+.main #content{ 
+	overflow-y:auto;
+}
+
+@media screen and (max-width: 992px) {
+    #menu_left {
+        display: none;
+    }
+    #menu_button{ 
+		visibility: visible;
+    }
+    #content{ 
+		width:100%!important;	
+    }
+}

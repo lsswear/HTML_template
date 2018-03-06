@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="EasyUI/themes/easyui_common.css" rel="stylesheet" type="text/css">
+    <link href="EasyUI/themes/insdep/easyui.css" rel="stylesheet" type="text/css">
+    <link href="EasyUI/themes/insdep/easyui_animation.css" rel="stylesheet" type="text/css">
+    <link href="EasyUI/themes/insdep/easyui_plus.css" rel="stylesheet" type="text/css">
+    <link href="EasyUI/themes/insdep/insdep_theme_default.css" rel="stylesheet" type="text/css">
+    <link href="EasyUI/themes/insdep/icon.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="EasyUI/jquery.min.js"></script>
+    <script type="text/javascript" src="EasyUI/jquery.easyui-1.5.1.min.js"></script>
+    <script type="text/javascript" src="EasyUI/themes/insdep/jquery.insdep-extend.min.js"></script>
+</head>
+<body>
+    <div class="easyui-panel" style="padding:5px;">
+        <a href="#" class="easyui-linkbutton" data-options="plain:true">Home</a>
+        <a href="#" class="easyui-menubutton" data-options="menu:'#mm1',iconCls:'icon-edit'">Edit</a>
+        <a href="#" class="easyui-menubutton" data-options="menu:'#mm2',iconCls:'icon-help'">Help</a>
+        <a href="#" class="easyui-menubutton" data-options="menu:'#mm3'">About</a>
+    </div>
+    <div class="easyui-layout" style="width:100%;height:100%;">
+        <div id="p" data-options="region:'west'" title="West" style="width:100px;padding:10px">
+            <div id="mm" class="easyui-menu" style="width:120px;">   
+                <div>New</div>   
+                <div>   
+                    <span>Open</span>   
+                    <div style="width:150px;">   
+                        <div><b>Word</b></div>   
+                        <div>Excel</div>   
+                        <div>PowerPoint</div>   
+                    </div>   
+                </div>   
+                <div data-options="iconCls:'icon-save'">Save</div>   
+                <div class="menu-sep"></div>   
+                <div>Exit</div>   
+            </div>  
+        </div>
+        <div data-options="region:'center'" title="Center"> 
+        </div>
+    </div>
+<script>
+    $('#mm').menu({    
+        onClick:function(item){    
+        //...    
+        }    
+}); 
+</script>
+</body>
+</html>

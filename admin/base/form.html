@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADMIN_index</title>
+	<link rel="stylesheet" href="../public/dist/semantic.min.css">
+	<link rel="stylesheet" href="../public/css/common.css">
+</head>
+	<body class="body">
+		<div class="ui grid"> 
+			<div class="row"> 
+				<div class="column">
+					<h2 class="ui header">元素</h2>
+					<p>复选框/单选框/内联</p>
+					<div class="ui form">
+						<div class="inline fields">
+							<div class="inline field">
+							    <div class="ui checkbox">
+							      <input type="checkbox">
+							      <label>复选框</label>
+							    </div>
+							</div>
+							<div class="inline field">
+							    <div class="ui slider checkbox">
+							      <input type="checkbox">
+							      <label>滑块</label>
+							    </div>
+							    <label></label>
+							</div>
+							<div class="inline field">
+							    <div class="ui toggle checkbox">
+							      <input type="checkbox">
+							      <label>切换</label>
+							    </div>
+							</div>
+							<div class="field">
+							    <div class="ui radio checkbox">
+							        <input type="radio" name="fruit">
+							        <label>苹果</label>
+							    </div>
+						    </div>
+						</div>			
+					</div>
+					<p>搜索下拉/必填/基本下拉/反色/均分</p>
+					<div class="ui inverted teal segment">
+						<div class="ui inverted black form">
+							<div class="two fields"> 
+								<div class="inline field"> 
+									<label>国家</label>
+									<select class="ui search dropdown"> 
+										<option value="AW">Aruba</option>
+										<option value="CL">Chile</option>
+										<option value="IQ">Iraq</option>
+									</select>
+								</div> 
+								<div class="inline field"> 
+									<label>test</label>
+									<select multiple="" class="ui dropdown"> 
+										<option >select</option>
+										<option value="AW">Aruba</option>
+										<option value="CL">Chile</option>
+										<option value="IQ">Iraq</option>
+									</select>
+								</div>
+							</div>
+							<div class="two fields">
+								<div class="required inline field"> 
+									<label>test</label>
+									<input type="text" placeholder="test">
+								</div>
+								<div class="inline field"> 
+									<label>test</label>
+									<select>
+										<option>test1</option>
+										<option>test2</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p>消息</p>
+					<div class="ui form">
+						<div class="ui message">
+						    <div class="header">我们有些问题</div>
+						    <ul class="list">
+						      	<li>请输入你的姓氏</li>
+						      	<li>请输入你的名字</li>
+						    </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+			<div class="row"> 
+				<div class="column"> 
+					<h2 class="ui header">状态</h2>
+					<p>加载</p>
+					<div class="ui loading form segment"> 
+						<div class="inline field"> 
+							<label>用户名</label>
+							<input type="text" placeholder="用户名">
+						</div>
+						<div class="inline field"> 
+							<label>密码</label>
+							<input type="text" placeholder="密码">
+						</div>
+					</div>
+					<p>错误</p>
+					<div class="ui error form "> 
+						<div class="ui error message"> 
+							<div class="header">错误</div>
+							<p>错误原因</p>
+						</div>
+						<div class="two fields">
+							<div class="field error"> 
+								<label>用户名</label>
+								<input type="text" placeholder="用户名">
+							</div>
+							<div class="field error"> 
+								<label>密码</label>
+								<input type="text" placeholder="密码">
+							</div>
+						</div>
+					</div>
+					<p>成功</p>
+					<div class="ui form success"> 
+						<div class="field success"> 
+							<label >E-mail</label>
+							<input type="email" placeholder="XXX">
+						</div>
+						<div class="ui success message"> 
+							<div class="header">success</div>
+							<p>success</p>
+						</div>
+					</div>
+					<p>警告</p>
+					<div class="ui form warning"> 
+						<div class="field warning"> 
+							<label >E-mail</label>
+							<input type="email" placeholder="XXX">
+						</div>
+						<div class="ui warning message"> 
+							<div class="header">warning</div>
+							<p>warning</p>
+						</div>
+					</div>
+					<p>禁用/只读</p>
+					<div class="ui form">
+						<div class="two fields"> 
+							<div class="disabled field"> 
+								<label>label</label>
+								<input type="text" placeholder="disable">
+							</div>
+							<div class="field"> 
+								<label>label</label>
+								<input type="text" placeholder="read only" readonly="" value="test">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+			<div class="row"> 
+				<div class="column"> 
+					<h2 class="ui header">变化</h2>
+					<p>表单大小顺序：tiny < small < large < big < huge < massive </p>
+					<div class="ui tiny form">
+					  	<div class="two fields">
+						    <div class="field">
+						      	<label>First Name</label>
+						      	<input placeholder="First Name" type="text">
+						    </div>
+						    <div class="field">
+						      	<label>Last Name</label>
+						      	<input placeholder="Last Name" type="text">
+						    </div>
+					  	</div>
+					  	<div class="ui submit button">Submit</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+			<div class="row"> 
+				<div class="column">
+					<h2 class="ui header"><a href="http://www.semantic-ui.cn/behaviors/form.html#/settings" target="_blank">表单验证</a></h2>
+					<form class="ui form segment" id="checked_form"> 
+						<div class="ui error message"></div>
+						<div class="two fields"> 
+							<div class="required field">
+								<label>用户名</label>
+								<input placeholder="英文10字以内" name="username" type="text">
+							</div>
+							<div class="required field">
+								<label>密码</label>
+								<input placeholder="英文或数字10字以内" name="password" type="text">
+							</div>
+						</div>
+						<div class="ui divider"></div>
+						<div class="two fields "> 
+							<div class="field"> 
+								<label>邮箱</label>
+								<input placeholder="邮箱" name="email" type="text">
+							</div>
+							<div class="field"> 
+								<label>电话</label>
+								<input placeholder="电话" name="phone" type="text">
+							</div>
+						</div>
+						<div class="rightaligned">
+							<div class="ui primary submit button">提交</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="../public/dist/jquery.min.js"></script>
+		<script src="../public/dist/semantic.min.js"></script>
+		<script src="../public/js/common.js"></script>
+		<script> 
+		$('select.dropdown').dropdown();
+		$('.ui.radio.checkbox').checkbox();
+		$('#checked_form').form({
+		    fields: {
+		      username: {
+		        identifier: 'username',
+		        rules: [
+		          { 
+		          	type   : 'regExp',
+		          	value  : /^[A-Za-z]{3,10}$/,
+		          	prompt : '用户名格式有误，英文3-10位'
+		          }
+		        ]
+		      },
+		      password: {
+		        identifier: 'password',
+		        rules: [
+		          { 
+		          	type   : 'regExp',
+		          	value  : /^[A-Za-z0-9]{6,10}$/,
+		          	prompt : '密码格式有误，英文或数字6-10位'
+		          }
+		        ]
+		      },
+		      email: {
+		        identifier: 'gender',
+		        rules: [
+		          {
+		            type   : 'email',
+		            prompt : '邮箱格式有误'
+		          }
+		        ]
+		      }
+		    }
+		  })
+		;
+		</script>
+	</body>
+</html>

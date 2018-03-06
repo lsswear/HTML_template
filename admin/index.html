@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADMIN_index</title>
+	<link rel="stylesheet" href="public/dist/semantic.min.css">
+	<link rel="stylesheet" href="public/css/common.css">
+</head>
+<body>
+	<!--横菜单开始-->
+	<div class="ui inverted menu">
+	  	<a class="active item">LOGO</a>
+	  	<!--<a class="item">模块1</a>
+	  	<a class="item">模块2</a>-->
+	  	<!--<a class="i right dropdown item" id="menu_button">菜单</a>-->
+	  	<div class="right menu">
+		  	<div class="ui dropdown item">
+		  		用户名
+		  		<i class="dropdown icon"></i> 
+		  		<div class="menu">
+			        <a class="item">修改密码</a>
+			        <a class="item">退出</a>
+	      		</div>
+	    	</div>
+	    	<div class="item" id='menu_button'>菜单</div>
+	  	</div>
+	  <!--<div class="ui right dropdown item"> 
+		用户名 
+		<i class="dropdown icon"></i>
+		<div class="menu"> 
+			<a class="item">修改密码</a>
+			<a class="item">退出</a>
+		</div>
+	  </div>-->
+	</div>
+	<!--横菜单结束-->
+	<!--main开始-->
+	<div class="ui grid main" id="main">
+		<!--左导航开始-->
+		<div class="two wide column inverted black menu_left" id="menu_left">
+			<div class="ui vertical menu inverted" id="menu1">
+				<a class="header item" onclick="left_menu_click('user_info.html','index',this)">首页</a> 
+				<div class="header item" id="header">
+					<i class="angle down icon"></i> 基本
+				</div> 
+				<div class="menu"> 
+					<a class="item" onclick="left_menu_click('base/grid.html','test1',this)">网格</a>
+					<a class="item" onclick="left_menu_click('base/form.html','test2',this)">表单</a>
+					<a class="item" onclick="left_menu_click('base/table.html','test3',this)">表格</a>
+				</div>
+				<div class="header item" id="header">
+					<i class="angle down icon"></i>模块
+				</div>
+				<div class="menu">
+		      		<a class="item" onclick="left_menu_click('model/accordion.html','test4',this)">折叠控件</a>
+		      		<a class="item" onclick="left_menu_click('model/bar.html','test5',this)">进度条</a>
+		      		<a class="item" onclick="left_menu_click('model/temporarily.html','test6',this)">弹出层</a>
+		      		<a class="item" onclick="left_menu_click('model/popup.html','test7',this)">提示框</a>
+		    	</div>
+		    	<div class="header item" id="header">
+					<i class="angle down icon"></i>设置
+				</div>
+				<div class="menu">
+		      		<a class="item" onclick="left_menu_click('set/users.html','user',this)">用户管理</a>
+		      		<a class="item" onclick="left_menu_click('set/usergroup.html','usergroup',this)">用户组管理</a>
+		      		<a class="item" onclick="left_menu_click('set/right.html','right',this)">权限管理</a>
+		      		<a class="item" onclick="left_menu_click('set/rightgroup.html','rightgroup',this)">权限组管理</a>
+		      		<a class="item" onclick="left_menu_click('set/setright.html','setright',this)">权限设定</a>
+		    	</div>
+			</div>	
+		</div>
+		<div class="fourteen wide column"  id="content" >
+			<div class="ui top attached tabular menu">
+			</div>
+			<div id="content_divs">
+        	</div>
+		</div>
+	</div>
+	<!--边栏开始-->
+	<div class="ui left vertical inverted thin sidebar menu menu_left" id="menu2">
+		<a class="header item" onclick="left_menu_click('user_info.html','index',this)">首页</a> 
+		<div class="header item" id="header">
+			<i class="angle down icon"></i> 基本
+		</div> 
+		<div class="menu"> 
+			<a class="item" onclick="left_menu_click('base/grid.html','test1',this)">网格</a>
+			<a class="item" onclick="left_menu_click('base/form.html','test2',this)">表单</a>
+			<a class="item" onclick="left_menu_click('base/table.html','test3',this)">表格</a>
+		</div>
+		<div class="header item" id="header">
+			<i class="angle down icon"></i>模块
+		</div>
+		<div class="menu">
+      		<a class="item" onclick="left_menu_click('model/accordion.html','test4',this)">折叠控件</a>
+      		<a class="item" onclick="left_menu_click('model/bar.html','test5',this)">进度条</a>
+      		<a class="item" onclick="left_menu_click('model/temporarily.html','test6',this)">弹出层</a>
+      		<a class="item" onclick="left_menu_click('model/popup.html','test7',this)">提示框</a>
+    	</div>
+    	<div class="header item" id="header">
+			<i class="angle down icon"></i>设置
+		</div>
+		<div class="menu">
+      		<a class="item" onclick="left_menu_click('set/users.html','user',this)">用户管理</a>
+      		<a class="item" onclick="left_menu_click('set/usergroup.html','usergroup',this)">用户组管理</a>
+      		<a class="item" onclick="left_menu_click('set/right.html','right',this)">权限管理</a>
+      		<a class="item" onclick="left_menu_click('set/rightgroup.html','rightgroup',this)">权限组管理</a>
+      		<a class="item" onclick="left_menu_click('set/setright.html','setright',this)">权限设定</a>
+    	</div>
+	</div>
+	<!--边栏结束-->
+	<!--main结束-->
+	<script src="public/dist/jquery.min.js"></script>
+	<script src="public/dist/semantic.min.js"></script>
+	<script src="public/js/common.js"></script>
+	<script>
+		//$("#content").height('800');
+	</script>
+</body>
+</html>

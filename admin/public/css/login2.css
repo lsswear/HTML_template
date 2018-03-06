@@ -1,0 +1,39 @@
+.grid.content{
+	z-index: 2;
+	height: 100%;
+	margin:0px;
+	background: #ccc;
+	width: 60%;
+	position: absolute;
+	left:20%;
+	top:0;
+	margin:0px;
+	padding: 2em;
+	filter:Alpha(opacity=20);
+	background-color: rgba(204,204,204,0.2);
+}
+.bg1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25%;
+	background:#eee; 
+	width: 100%;
+}
+.bg2{
+	position: absolute;
+	top: 75%;
+	left: 0;
+	height: 25%;
+	width: 100%;
+	background:#eee; 
+}
+@media screen and (max-width: 992px) {
+    .grid.content{ 
+		width:100%!important;
+		left:0;	
+    }
+    #logindiv{
+    	display: none;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADMIN_index</title>
+	<link rel="stylesheet" href="../public/dist/semantic.min.css">
+	<link rel="stylesheet" href="../public/css/common.css">
+</head>
+	<body class="body">
+		<div class="ui grid"> 
+			<div class="row">
+				<div class="column">
+					<button class="ui button" id="uevent1">Run</button>
+					<div class="ui indicating active progress"  data-value="0" data-percent="0" id="e1">
+					  <div class="bar">
+					    <div class="progress"></div>
+					  </div>
+					  <div class="label">Waiting for you to press button</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+			<div class="row">
+				<div class="column">
+					<button class="ui button" id="uevent2">Run</button>
+					<div class="ui indicating active progress"  data-value="0" data-percent="0" id="e2">
+					  <div class="bar">
+					    <div class="progress"></div>
+					  </div>
+					  <div class="label">Waiting for you to press button</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../public/dist/jquery.min.js"></script>
+		<script src="../public/dist/semantic.min.js"></script>
+		<script src="../public/js/common.js"></script>
+		<script> 
+			$('#uevent1')
+			  .on('click', function() {
+			    var
+			      $progress       = $('#e1'),
+			      $button         = $(this),
+			      updateEvent
+			    ;
+			    // restart to zero
+			    clearInterval(window.fakeProgress)
+			    $progress.progress('reset');
+			     // updates every 10ms until complete
+			    window.fakeProgress = setInterval(function() {
+			      $progress.progress('increment');
+			      $button.text( $progress.progress('get value') );
+			      // stop incrementing when complete
+			      if($progress.progress('is complete')) {
+			        clearInterval(window.fakeProgress)
+			      }
+			    }, 10);
+			  })
+			;
+			$('.ui.progress')
+			  .progress({
+			    duration : 200,
+			    total    : 200,
+			    text     : {
+			      active: '{value} of {total} done'
+			    }
+			  })
+			;
+			$('#uevent2').on('click',function(){ 
+				var 
+					$progress = $('#e2'),
+					$button         = $(this);
+					percent=1;
+				clearInterval(window.fakeProgress);
+				$progress.progress({
+					  percent: 0
+					});
+				window.fakeProgress = setInterval(function() {
+			      	percent=percent+1;
+			      	//$progress.progress('increment');
+			      	$progress.progress({
+			      		value    : percent, 
+			      		duration : 100,
+			    		total    : 100,
+					  	percent: percent,
+					  	text     : {
+					      	active: '{value} of {total} done'
+					    }
+					});
+			      	//$button.text( $progress.progress('get value') );
+			      	// stop incrementing when complete
+			      	if($progress.progress('is complete')) {
+			        	clearInterval(window.fakeProgress)
+			      	}
+			    }, 100);
+			});
+		</script>
+	</body>
+</html>

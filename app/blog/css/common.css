@@ -1,0 +1,31 @@
+@font-face
+	{
+		font-family: rmct;
+		src: 	url('../font/rmct.woff') format('woff'),
+			 	url('../font/rmct.svg') format('svg'),
+			 	url('../font/rmct.ttf') format('truetype');
+	}
+body{   
+	width: 100%;
+	height: auto;
+}
+.form #search{
+	width:100%;
+}
+.title_img{
+	width: 100%;
+	height: 40%;
+}
+.transition{
+	color: #E84418;
+}
+.edui-editor{
+	z-index: 1;
+}
+/*@media screen and (min-width: 700px) {
+    .main{
+		padding-left:20px;
+		padding-right:20px;
+	}
+}*/
+

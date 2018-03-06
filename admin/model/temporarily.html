@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADMIN_index</title>
+	<link rel="stylesheet" href="../public/dist/semantic.min.css">
+	<link rel="stylesheet" href="../public/css/common.css">
+</head>
+	<body class="body">
+		<div class="ui grid"> 
+			<div class="row">
+				<div class="column">
+					<button class="ui button" id="eb1">基本</button>
+					&nbsp;
+					<button class="ui button" id="eb2">样例2</button>
+					&nbsp;
+					<button class="ui button" id="eb3">样例3</button>
+					&nbsp;
+					<button class="ui button" id="eb4">样例4</button>
+					&nbsp;
+					<button class="ui button" id="eb5">样例5</button>
+				</div>
+			</div>
+			<div class="ui divider"></div>
+			<div class="row">
+				<div class="column">
+					弹出层组成 : header content/(image content) <br>
+					弹出层大小 : 全屏(默认) fullscreen > large >small
+				</div>
+			</div>
+		</div>
+		<div class="ui basic modal" id="e1"> 
+			<div class="header">标题</div>
+			<div class="content"> 
+				<p>内容</p>
+			</div>
+			<div class="image content"> 
+				<img src="./public/image/1.jpg" class="ui small image">
+				<div class="description">描述</div>
+			</div>
+			<div class="actions">
+			    <div class="ui approve button">是</div>
+			    <div class="ui button">确定</div>
+			    <div class="ui cancel button">否</div>
+			</div>
+		</div>
+		<div class="ui basic modal" id="e2"> 
+			<div class="header">标题</div>
+			<div class="content"> 
+				<p>内容</p>
+			</div>
+			<div class="image content"> 
+				<img src="./public/image/1.jpg" class="ui small image">
+				<div class="description">描述</div>
+			</div>
+			<div class="actions">
+			    <div class="actions">
+			      	<div class="ui cancel red basic inverted button">
+			        	<i class="remove icon"></i>
+			        	No
+			      	</div>
+			      	<div class="ui ok green basic inverted button">
+			        	<i class="checkmark icon"></i>
+			        	Yes
+			      	</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui fullscreen modal" id="e3"> 
+			<div class="header">标题</div>
+			<div class="content"> 
+				<p>内容</p>
+			</div>
+		</div>
+		<div class="ui small modal" id="e4"> 
+			<div class="header">标题</div>
+			<div class="content"> 
+				<p>内容</p>
+			</div>
+		</div>
+		<div class="ui large modal" id="e5"> 
+			<div class="header">标题</div>
+			<div class="content"> 
+				<p>内容</p>
+			</div>
+		</div>
+		<script src="../public/dist/jquery.min.js"></script>
+		<script src="../public/dist/semantic.min.js"></script>
+		<script src="../public/js/common.js"></script>
+		<script> 
+			$('#eb1').on('click',function(){ 
+				$('#e1').modal({
+					onShow:function(){
+						$(this).find('.content').get('test.txt');
+					}
+				}).modal('show');
+			});
+			$('#eb2').on('click',function(){ 
+				$('#e2').modal('show');
+			});
+			$('#eb3').on('click',function(){ 
+				$('#e3').modal('show');
+			});
+			$('#eb4').on('click',function(){ 
+				$('#e4').modal('show');
+			});
+			$('#eb5').on('click',function(){ 
+				$('#e5').modal('show');
+			});
+			
+		</script>
+	</body>
+</html>

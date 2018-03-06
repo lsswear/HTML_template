@@ -1,0 +1,53 @@
+用户
+	用户组名 用户名 用户密码 状态 添加者id 添加时间 
+权限
+	权限组名 权限名 路径 是否显示 状态 添加者id 添加时间
+权限组
+	权限组名 状态 添加者id 添加时间
+用户组
+	用户组名 状态 添加者id 添加时间
+
+/*系统日志范围 用户、组、权限修改*/
+table system_log
+id
+操作表
+操作内容 
+操作员id
+操作时间
+/*用户表*/ 
+table user
+id
+user_name
+user_password mad5(密码+用户名) 
+user_status
+add_user_id
+add_time
+/*权限表*/
+table right
+id
+right_name
+rignt_group_id
+right_path
+is_show
+right_status
+add_user_id
+add_time
+/*权限表*/
+table right_group
+id
+right_group_name
+right_group_status
+add_user_id
+add_time
+/*用户组表*/
+table user_group
+id
+user_group_name
+user_group_status
+add_user_id
+add_time
+/*权限关系表*/
+table right_relation
+id
+right_id
+ug_id

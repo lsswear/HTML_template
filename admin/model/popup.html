@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADMIN_index</title>
+	<link rel="stylesheet" href="../public/dist/semantic.min.css">
+	<link rel="stylesheet" href="../public/css/common.css">
+</head>
+	<body class="body">
+		<div class="ui grid"> 
+			<div class="row">
+				<div class="column">
+					<h2 class="ui header">无js</h2>
+					<div class="ui icon button" data-tooltip="Add users to your feed" data-inverted="" data-position="right center">
+					  	<i class="add icon"></i>右侧
+					</div>
+					<div class="ui icon button" data-tooltip="Add users to your feed">
+					  	<i class="add icon"></i>上侧
+					</div>
+					<div class="ui icon button" data-tooltip="Add users to your feed" data-position="bottom center">
+					  	<i class="add icon"></i>下侧
+					</div>
+					<div class="ui icon button" data-tooltip="Add users to your feed" data-position="left center">
+					  	<i class="add icon"></i>左侧
+					</div>
+				</div>
+			</div>
+			<div class="row"> 
+				<div class="column">
+					<h2 class="ui header">有js</h2>
+					<div class="some-wrapping-div" id="pd1">
+					  	<div class="ui custom button">样例1</div>
+					</div>
+					<div id="pd2">
+						<div class="ui teal button" data-title="Using click events" data-content="Clicked popups will close if you click away, but not if you click inside the popup">验证</div>
+						<div class="ui icon input">
+						  <input type="text" placeholder="text">
+						  <i class="search icon"></i>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div class="ui custom popup top left transition hidden" id="pdiv1">
+		test1
+		</div>
+		<script src="../public/dist/jquery.min.js"></script>
+		<script src="../public/dist/semantic.min.js"></script>
+		<script src="../public/js/common.js"></script>
+		<script> 
+			$('#pd1 .button').popup({
+			    popup : $('#pdiv1'),
+			    on    : 'click',
+			    position : 'bottom center'
+			});
+			$('#pd2 .button').popup({
+			    on    : 'click',
+			    delay : {
+			    	show:250,
+			    	hide:50
+			    },
+			    onCreate:function(){ 
+			    	alert('onCreate');
+			    },
+			    onRemove:function(){ 
+			    	alert('onRemove');
+			    },
+			    onShow:function(){ 
+			    	alert('onShow');
+			    }
+
+			});
+			$('#pd2 input').popup({
+				position : 'right center',
+				title    : 'INPUT',
+		    	content  : 'This input text',
+			    on       : 'focus'
+			});
+
+		</script>
+	</body>
+</html>

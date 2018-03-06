@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>edit_article</title>
+	<link rel="stylesheet" href="semantic2016/semantic.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="dist/css/share.min.css">
+</head>
+<body>
+	<div class="ui left thin sidebar inverted vertical menu">
+		<a href="#">
+			<img class="ui image" src="image/lsswear_logo.png">
+		</a>
+	    <a class="item">
+	      首页
+	    </a>
+	    <a class="item">
+	      网站设置
+	    </a>
+	    <a class="item">
+	      类别管理
+	    </a>
+	    <a class="item">
+	      创建文章
+	    </a>
+	</div>
+	<div class="pusher">
+		<div class="ui vertical container"> 
+			<div class="ui right floated black icon button" id="menu_btn"><i class="content icon"></i></div>
+			<h3 class="ui header">文章编辑</h3>
+			<div class="ui divider"></div>
+			<form class="ui form">
+			  	<div class="field">
+			    	<label>标题</label>
+			    	<input name="first-name" placeholder="First Name" type="text">
+			  	</div>
+			  	<div class="field">
+			    	<label>类别</label>
+			    	<select class="ui search dropdown" name="last-name">
+			    	 	<option value="">Select Country</option>
+					    <option value="AF">Afghanistan</option>
+					    <option value="BX">Åland Islands</option>
+					    <option value="CL">Albania</option>
+					    <option value="DZ">Algeria</option>
+			    	</select>
+			  	</div>
+			  	<div class="field">
+			  		<script id="editor" type="text/plain" style="width:100%;height:500px;"></script>
+			  	</div>
+			  	<button class="ui green button" type="submit">提交</button>
+			</form>
+		</div>
+	</div>	
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<script src="semantic2016/semantic.min.js"></script>
+	<script src="dist/js/jquery.share.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="ueditor1_4_3_3-utf8-php/utf8-php/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="ueditor1_4_3_3-utf8-php/utf8-php/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="ueditor1_4_3_3-utf8-php/utf8-php/lang/zh-cn/zh-cn.js"></script>
+	<script>
+		$(function(){
+			$('#menu_btn').click(function(){
+				$('.ui.sidebar').sidebar({dimPage:false}).sidebar('toggle');
+			});
+			var ue = UE.getEditor('editor');
+			$('select.dropdown').dropdown({direction:'downward'});
+		});
+	</script>
+</body>
+</html>

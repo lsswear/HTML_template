@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>edit_kind</title>
+	<link rel="stylesheet" href="semantic2016/semantic.min.css">
+	<link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+	<div class="ui left thin sidebar inverted vertical menu">
+		<a href="#">
+			<img class="ui image" src="image/lsswear_logo.png">
+		</a>
+	    <a class="item">
+	      首页
+	    </a>
+	    <a class="item">
+	      网站设置
+	    </a>
+	    <a class="item">
+	      类别管理
+	    </a>
+	    <a class="item">
+	      创建文章
+	    </a>
+	</div>
+	<div class="pusher">
+		<div class="ui vertical container ">
+			<div class="ui right floated black icon button" id="menu_btn"><i class="content icon"></i></div>
+			<h3 class="ui header">类型编辑</h3>
+			<div class="ui divider"></div>
+			<form class="ui form">
+				<div class="ui stackable two column grid">
+					<input type="hidden" name="id">
+					<div class="inline column">
+			    		<input name="name" placeholder="名称" type="text">
+					</div>
+					<div class="center aligned column"> 
+						<button class="ui green button">编辑</button>
+					</div>
+				</div>
+			</form>
+			<div class="ui clear divider"></div>
+			<table class="ui celled striped orange inverted center aligned table">
+				<thead>
+				    <tr>
+				    	<th>名称</th>
+				    	<th>文章数量</th>
+				    	<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+				    <tr>
+				      	<td>test1</td>
+				      	<td>0</td>
+				      	<td>修改 禁用/启用</td>
+				    </tr>
+				    <tr>
+				      	<td>test2</td>
+				      	<td>0</td>
+				      	<td>修改 禁用/启用</td>
+				    </tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+	<script src="semantic2016/semantic.min.js"></script>
+	<script>
+		$(function(){
+			$('#menu_btn').click(function(){
+				$('.ui.sidebar').sidebar({dimPage:false}).sidebar('toggle');
+			});
+		});
+	</script>
+</body>
+</html>

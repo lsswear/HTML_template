@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ADMIN_index</title>
+	<link rel="stylesheet" href="../public/dist/semantic.min.css">
+	<link rel="stylesheet" href="../public/css/common.css">
+</head>
+	<body class="body">
+		<div class="ui grid"> 
+			<div class="row"> 
+				<div class="column">
+					<h2 class="ui header">基本</h2>
+					<p>相应式/结构/状态/单元格/列宽/尺寸 表格默认堆栈方式</p>
+					<table class="ui celled structured  small table"> 
+						<thead> 
+							<tr>
+								<th rowspan="2" class="two wide"></th>
+								<th rowspan="2" class="three wide">名称</th>
+								<th rowspan="2" class="three wide">路径</th>
+								<th colspan="2" class="eight wide">属性</th>
+							</tr>
+							<tr>
+								<th>显示</th>
+								<th>使用</th>
+							</tr>
+						</thead>
+						<tbody> 
+							<tr>
+								<td rowspan="2">模块1</td>
+								<td>查询</td>
+								<td>test/search</td>
+								<td class="positive">是</td>
+								<td class="positive">是</td>
+							</tr>
+							<tr>
+								<td>编辑</td>
+								<td>test/edit</td>
+								<td class="negative">否</td>
+								<td class="negative">否</td>
+							</tr>
+							<tr>
+								<td>模块2</td>
+								<td>编辑</td>
+								<td>test2/edit</td>
+								<td class="warning">否</td>
+								<td>是</td>
+							</tr>
+							<tr class="disabled">
+								<td>模块3</td>
+								<td>编辑</td>
+								<td>test3/edit</td>
+								<td>是</td>
+								<td>是</td>
+							</tr>
+						</tbody>
+						<tfoot class="full-width"> 
+							<tr>
+								<th></th>
+								<th colspan="4"> 
+									<div class="ui right floated small primary labeled icon button"> 
+										<i class="user icon"></i>test
+									</div>
+									<div class="ui small button">
+										test
+									</div>
+								</th>
+							</tr>
+						</tfoot>	
+					</table>
+					<p>取消堆栈/带条/悬浮激活/等宽/反色/行间距</p>
+					<p>行间距:compact < padded < very padded </p>
+					<table class="ui three column unstackable  striped hover inverted red compact table">
+						<thead>
+						    <tr>
+						      	<th>用户名</th>
+						      	<th>ip</th>
+						      	<th class="right aligned">最后登录时间</th>
+						    </tr>
+						</thead>
+						<tbody>
+						    <tr>
+						      	<td>约翰</td>
+						      	<td>120.0.0.7</td>
+						      	<td class="right aligned">2017/1/1</td>
+						    </tr>
+						    <tr>
+						      	<td>王尼玛</td>
+						      	<td>120.0.0.7</td>
+						      	<td class="right aligned">2017/1/1</td>
+						    </tr>
+						</tbody>
+					</table>
+					<p>折叠/彩色</p>
+					<table class="ui collapsing blue table">
+					  	<thead>
+						    <tr>
+						      	<th>姓名</th>
+						      	<th>状态</th>
+						      	<th>记录</th>
+						    </tr>
+					  	</thead>
+					  	<tbody>
+						    <tr>
+						      	<td>约翰</td>
+						      	<td>已审核</td>
+						      	<td>无</td>
+						    </tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
