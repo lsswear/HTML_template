@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="edge" />
+<link rel="shortcut icon" href="favicon.ico" />
+<title>jQuery EasyUI 1.4.5 - Insdep of theme</title>
+<!--
+	注意样式表优先级
+    主题样式必须在easyui组件样式后。
+-->
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.easyui.min.js"></script>
+<link href="../themes/insdep/easyui.css" rel="stylesheet" type="text/css">
+<link href="../themes/insdep/master.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../themes/insdep/jquery.insdep-extend.min.js"></script>
+<link rel="stylesheet" href="../themes/insdep/easyui_animation.css">
+<link rel="stylesheet" href="../themes/insdep/easyui_plus.css">
+<link rel="stylesheet" href="../themes/insdep/icon.css">
+<link rel="stylesheet" href="../themes/insdep/insdep_tables.css">
+<link rel="stylesheet" href="../themes/insdep/insdep_theme_default.css">
+<style type="text/css">
+    .theme-login-form>dd>select{
+        width:100%;
+    }
+</style>
+</head>
+
+<body class="theme-login-layout">
+    <div class="theme-login-header"></div>
+    <div id="theme-login-form">
+        <div class="QRcode"></div>
+        <div class="QRcode-layout hide">
+            <div class="QRcode-layout-close"></div>
+            <div class="QRcode-header">
+                <b>APP扫码登录</b>
+                <span>请使用最新版APP进行扫码登录</span>
+            </div>
+            <div class="QRcode-content"><img src="QRcode-demo.png" width="215"></div>
+        </div>
+        <form id="form" method="post" class="theme-login-form">  
+            <dl>
+                <dt><img src="logo_110.png"></dt>
+                <dd>
+                    <select id="userclass" class="theme-login-select" name="userclass" style="width:100%">    
+                        <option value="0">请选择用户类型</option>  
+                        <option value="1">教师</option>   
+                        <option value="2">学生</option>  
+                    </select>  
+                </dd>
+                <dd><input id="mail" name="mail" class="theme-login-text textbox-f"  style="width:100%"/></dd>
+                <dd><input id="username" name="username" class="theme-login-text textbox-f"  style="width:100%"/></dd>
+                <dd><input id="password" name="password" class="theme-login-text textbox-f"  style="width:100%"/></dd>
+                <dd><input id="code" name="code" class="theme-login-text textbox-f"  style="width:100%"/></dd>
+                <dd><a id="submit" href="javascript:void(0)" style="width:100%">Sign in</a></dd>
+            </dl>
+        </form>   
+    </div>
+    <div class="theme-login-footer">
+        <dl style="text-align:center">
+            <dt><a>免费加入</a> | <a id="ok">产品优势</a> | <a>系列产品</a> | <a>应用下载</a> | <a>帮助手册</a> | <a>联系我们</a></dt>
+            <dd>© 2007 - <script>var year = new Date();document.write(year.getFullYear());</script>2018 宁波市维沃信息科技有限公司.版权所有</dd>
+        </dl>
+    </div>
+    <script>
+    	$(function(){
+            $(".QRcode").on("click",function(){
+                $(".QRcode-layout").removeClass("hide");
+
+            });
+            $(".QRcode-layout-close").on("click",function(){
+                $(".QRcode-layout").addClass("hide");
+            });
+            $.extend($.fn.validatebox.defaults.tipOptions, {
+                onShow: function() {
+                    $(this).tooltip("tip").css({backgroundColor:"#ff7e00", border: "none",color: "#fff"});
+                    
+                }
+            })
+			
+			/*布局部分*/
+			$('#theme-login-layout').layout({
+				fit:true/*布局框架全屏*/
+			});   
+			
+			/*表单定义*/
+			$('#userclass').combobox({    
+				/*通过ajax取数据
+				url:'userclass.json',    
+				valueField:'id',
+				textField:'text'
+				*/
+				editable:false /*不允许用户通过输入选择*/
+				
+			});  
+			$('#username').textbox({    
+				prompt:'Account or number',
+			});
+			$('#password').textbox({    
+				type:"password",
+				prompt:'Password',
+			});
+			$('#code').textbox({    
+				prompt:'Code',
+			})
+			
+			$('#submit').linkbutton({    
+				
+			}); 
+			
+			/*验证码tooltip*/
+			
+		})
+    </script>
+</body>
+</html>
