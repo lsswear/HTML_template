@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>article</title>
+		<link rel="stylesheet" href="semantic2016/semantic.min.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="dist/css/share.min.css">
+		<link rel="stylesheet" href="dist/custom/jquery.mCustomScrollbar.min.css">
+	</head>
+	<body id="content">
+		<div class="ui left thin sidebar inverted vertical menu">
+			<a href="#">
+				<img class="ui image" src="image/lsswear_logo.png">
+			</a>
+		    <a class="item" href="index.html">
+		      首页
+		    </a>
+		    <a class="item" href="introduction.html">
+		      个人简介
+		    </a>
+		    <a class="item" href="#">
+		      网站设置
+		    </a>
+		    <a class="item" href="edit_kind.html">
+		      类别管理
+		    </a>
+		    <a class="item" href="edit_article.html">
+		      创建文章
+		    </a>
+		</div>
+		<div class="pusher">
+			<div class="ui vertical container"> 
+				<div class="ui right floated black icon button" id="menu_btn"><i class="content icon"></i></div>
+				<h3 class="title ui header">文章标题<div class="sub header">time</div></h3>
+				<div class="ui divider"></div>
+				文章内容
+			</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		<script src="dist/custom/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="semantic2016/semantic.min.js"></script>
+		<script src="dist/js/common.js"></script>
+		<script>
+			$(function(){
+				$('.title').css('color','rgba(0,0,0,.6)');
+				$('.title').find('.sub').css('color','#6ab82c');
+			})
+		</script>
+	</body>
+</html>

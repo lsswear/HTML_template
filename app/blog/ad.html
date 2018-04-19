@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>ad</title>
+		<link rel="stylesheet" href="semantic2016/semantic.min.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="dist/css/share.min.css">
+		<link rel="stylesheet" href="dist/custom/jquery.mCustomScrollbar.min.css">
+	</head>
+	<body id="content">
+		<div class="ui top fixed inverted menu">
+		  	<div class="ui category search item">
+			    <div class="ui transparent icon input">
+			      	<input class="prompt" placeholder="search" type="text" style="">
+			      	<i class="search link icon"></i>
+			    </div>
+			    <div class="results"></div>
+			 </div>
+		  	<div class="ui black icon right item dropdown" id="menu_btn">
+		    	<i class="content icon"></i>
+		  	</div>
+		</div>
+		<div class="ui left thin sidebar inverted vertical menu">
+			<a href="#">
+				<img class="ui image" src="image/lsswear_logo.png">
+			</a>
+		    <a class="item" href="index.html">
+		      首页
+		    </a>
+		    <a class="item" href="introduction.html">
+		      个人简介
+		    </a>
+		    <a class="item" href="#">
+		      网站设置
+		    </a>
+		    <a class="item" href="edit_kind.html">
+		      类别管理
+		    </a>
+		    <a class="item" href="edit_article.html">
+		      创建文章
+		    </a>
+		</div>
+		<div class="pushe">
+			<div class="ui vertical container"> 
+				<div class="ui large leaderboard test ad" data-text="Large Leaderboard"></div>
+				<div class="ui billboard test ad" data-text="广告牌"></div>
+				<div class="ui billboard test ad" data-text="广告牌"></div>
+				<div class="ui billboard test ad" data-text="广告牌"></div>
+				<div class="ui billboard test ad" data-text="广告牌"></div>
+				<div class="ui billboard test ad" data-text="广告牌"></div>
+			</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+		<script src="semantic2016/semantic.min.js"></script>
+		<script src="dist/custom/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="dist/js/common.js"></script>
+		<script>
+			$(function(){
+				$('.prompt').css('color','rgba(232,68,24,.67)');
+				var content = [
+					{ title: 'Andorra' },
+					{ title: 'United Arab Emirates' },
+					{ title: 'Afghanistan' },
+					{ title: 'Antigua' },
+					{ title: 'Anguilla' },
+					{ title: 'Albania' },
+					{ title: 'Armenia' },
+					{ title: 'Netherlands Antilles' },
+					{ title: 'Angola' },
+					{ title: 'Argentina' },
+					{ title: 'American Samoa' },
+					{ title: 'Austria' },
+					{ title: 'Australia' },
+					{ title: 'Aruba' },
+					{ title: 'Aland Islands' },
+					{ title: 'Azerbaijan' },
+					{ title: 'Bosnia' },
+					{ title: 'Barbados' },
+					{ title: 'Bangladesh' },
+					{ title: 'Belgium' },
+					{ title: 'Burkina Faso' },
+					{ title: 'Bulgaria' },
+					{ title: 'Bahrain' },
+					{ title: 'Burundi' }
+				];
+				$('.ui.search').search({source: content});
+				$('.ad').css('width','100%');
+			})
+		</script>
+	</body>
+</html>

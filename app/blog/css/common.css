@@ -5,6 +5,9 @@
 			 	url('../font/rmct.svg') format('svg'),
 			 	url('../font/rmct.ttf') format('truetype');
 	}
+html { 
+	overflow-y: hidden;
+}
 body{   
 	width: 100%;
 	height: auto;
