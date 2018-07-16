@@ -1,0 +1,35 @@
+{
+  "name": "mini.css",
+  "description": "A minimal, responsive, style-agnostic CSS framework.",
+  "main": "dist/mini-default.min.css",
+  "authors": [
+    "Angelos Chalaris (chalarangelo@gmail.com)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "sass",
+    "minimal",
+    "responsive",
+    "style-agnostic",
+    "framework",
+    "toolkit",
+    "mini",
+    "mini.css"
+  ],
+  "ignore": [
+    "docs",
+    "prepros-6.config"
+  ],
+  "homepage": "https://minicss.org",
+  "version": "3.0.0",
+  "_release": "3.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.0",
+    "commit": "dca7e91197dc49c79eb4ca2facc557dfd47556c5"
+  },
+  "_source": "https://github.com/chalarangelo/mini.css.git",
+  "_target": "3.0.0",
+  "_originalSource": "mini.css"
+}

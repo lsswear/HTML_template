@@ -1,0 +1,13 @@
+{
+	"name":"bhmobile",
+	"dependencies": {
+	    "jquery":"3.3.1",
+		"mini.css":"3.0.0",
+		"sangar-slider":"^1.2.0"
+	 },
+	"devDependeccies": {
+		"jquery":"^3.3.1",
+		"mini.css":"^3.0.0",
+		"sangar-slider":"^1.2.0"
+	}
+}

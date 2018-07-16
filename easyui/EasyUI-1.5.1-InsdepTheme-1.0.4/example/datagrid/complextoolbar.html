@@ -16,17 +16,19 @@
 		</thead>
 	</table>
 	<div id="tb" style="padding:2px 5px;">
-		Date From: <input class="easyui-datebox" style="width:110px">
-		To: <input class="easyui-datebox" style="width:110px">
-		Language: 
-		<select class="easyui-combobox" panelHeight="auto" style="width:100px">
-			<option value="java">Java</option>
-			<option value="c">C</option>
-			<option value="basic">Basic</option>
-			<option value="perl">Perl</option>
-			<option value="python">Python</option>
-		</select>
-		<a href="#" class="easyui-linkbutton" iconCls="icon-search">Search</a>
+		<form action="" id="dctForm">
+			Date From: <input class="easyui-datebox" name="startTime" style="width:110px">
+			To: <input class="easyui-datebox" name="endTime" style="width:110px">
+			Language: 
+			<select class="easyui-combobox" panelHeight="auto" name="language" style="width:100px">
+				<option value="java">Java</option>
+				<option value="c">C</option>
+				<option value="basic">Basic</option>
+				<option value="perl">Perl</option>
+				<option value="python">Python</option>
+			</select>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-search" id="dctBtn">Search</a>
+		</form>
 	</div>
 	<div id="ft" style="padding:2px 5px;">
 		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true"></a>
@@ -35,3 +37,10 @@
 		<a href="#" class="easyui-linkbutton" iconCls="icon-cut" plain="true"></a>
 		<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true"></a>
 	</div>
+	<script>
+		$(function(){
+	        $('#dctBtn').bind('click', function(){
+	    		alert($('#dctForm').serialize());
+	        });
+	    });
+	</script>

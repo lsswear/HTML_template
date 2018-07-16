@@ -1,0 +1,41 @@
+{
+  "name": "mini.css",
+  "version": "3.0.0",
+  "description": "A minimal, responsive, style-agnostic CSS framework.",
+  "main": "dist/mini-default.min.css",
+  "directories": {
+    "lib": "src/mini"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-docs": "node ./docs/build-docs.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chalarangelo/mini.css.git"
+  },
+  "devDependencies": {
+    "file-saver": "^1.3.8",
+    "jszip": "^3.1.5",
+    "node-sass": "^4.5.2",
+    "sass.js": "^0.10.9"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "minimal",
+    "responsive",
+    "style-agnostic",
+    "framework",
+    "toolkit",
+    "mini",
+    "mini.css"
+  ],
+  "author": "Angelos Chalaris (chalarangelo@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chalarangelo/mini.css/issues",
+    "email": "chalarangelo@gmail.com"
+  },
+  "homepage": "http://minicss.org"
+}
